@@ -1,6 +1,7 @@
 package com.onlypankaj.controllers;
 
 import com.onlypankaj.model.Employee;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "onlypankajapi")
 public class EmployeeController {
     private List<Employee> employees = createList();
 
